@@ -1,7 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// @ts-ignore
-import Icon from './assets/traffic-blue.png';
 import "cesium/Widgets/widgets.css";
 
 
@@ -22,7 +20,6 @@ function getGreeting(user = null) {
         return (
             <h1>
                 Hello, {formatName(user)}!
-                <img src='./assets/traffic-blue.png'/>
             </h1>
         );
     }
@@ -64,7 +61,6 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <img src={Icon}/>
                 <Welcome name="张三"></Welcome>
                 <Welcome name="王二"></Welcome>
                 <Welcome name="历史"></Welcome>
