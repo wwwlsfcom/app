@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "cesium/Widgets/widgets.css";
+import {CesiumViewer} from "./CesiumViewer";
 
 
 /*const name = 'Josh Perez';
@@ -113,6 +114,6 @@ class Clock extends React.Component<any, any> {
 }
 
 ReactDOM.render(
-    <Clock/>,
+    <CesiumViewer/>,
     document.getElementById('root')
 );

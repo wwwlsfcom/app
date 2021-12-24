@@ -27,6 +27,16 @@ module.exports = {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
             }, {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    // 将 JS 字符串生成为 style 节点
+                    "style-loader",
+                    // 将 CSS 转化成 CommonJS 模块
+                    "css-loader",
+                    // 将 Sass 编译成 CSS
+                    "sass-loader",
+                ],
+            }, {
                 test: /\.(png|gif|jpg|jpeg|svg|xml|json)$/,
                 use: ['url-loader']
             }, {
@@ -43,7 +53,7 @@ module.exports = {
         // mainFiles: ['module', 'main', 'Cesium']
     },
     output: {
-        path: 'c:/target/qyj',
+        path: 'c:/target/react-app',
         filename: "bundle.js",
         clean: true
     },
