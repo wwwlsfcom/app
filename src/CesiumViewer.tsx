@@ -1,4 +1,5 @@
 import React from "react";
+import "cesium/Widgets/widgets.css";
 import "./CesiumViewer.scss";
 
 const Cesium = require('cesium/Cesium');
