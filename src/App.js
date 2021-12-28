@@ -19,6 +19,9 @@ class App extends React.Component {
                     <li>
                         <Link to="game3">game</Link>
                     </li>
+                    <li>
+                        <Link to="tree">tree</Link>
+                    </li>
                 </ul>
                 <Outlet />
             </div>

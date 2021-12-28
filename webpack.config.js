@@ -21,7 +21,6 @@ module.exports = {
             {
                 test: /\.tsx$/i,
                 loader: 'ts-loader',
-                exclude: /node_modules/
             },
             {
                 test: /\.css$/,
