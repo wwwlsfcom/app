@@ -5,7 +5,7 @@ import "./CesiumViewer.scss";
 const Cesium = require('cesium/Cesium');
 
 
-export class CesiumViewer extends React.Component<any, any> {
+export default class CesiumViewer extends React.Component<any, any> {
 
     constructor(props) {
         super(props);

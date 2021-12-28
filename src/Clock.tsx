@@ -1,32 +1,37 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
-export class Clock extends React.Component<any, any> {
-    private timerID: NodeJS.Timer;
+export default  class Clock extends React.Component<any, any> {
+    private timerID;
 
     constructor(props) {
         super(props);
-        this.state = {
-            date: new Date()
-        };
+        this.state = {date: new Date()};
+        // this.setState({date: new Date()}); // 不行?
     }
 
     componentDidMount() {
-        this.timerID = setInterval(() => this.tick('date'), 1000);
-    }
-
-    private tick(name) {
-        this.setState({[name]: new Date()});
+        this.timerID = setInterval(
+            () => this.tick(),
+            1000
+        );
     }
 
     componentWillUnmount() {
         clearInterval(this.timerID);
     }
 
+    tick() {
+        this.setState({
+            date: new Date()
+        });
+    }
+
     render() {
         return (
             <div>
-                <h1>Hello, world!</h1>
-                <h2>It is {this.state.date.toLocaleTimeString()}</h2>
+                <h2>It is {this.state.date && this.state.date.toLocaleTimeString()}.</h2>
+                <Link to="/cesium">cesium</Link>
             </div>
         );
     }
